@@ -1,0 +1,84 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define LYR1 1
+#define LYR2 2
+#define LYR3 3
+#define LYR4 4
+#define LYR5 5
+#define LYR6 6
+
+/ {
+    behaviors {
+    	hm: homerow_mods {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "HOMEROW_MODS";
+	    #binding-cells = <2>;
+	    tapping-term-ms = <150>;
+	    quick-tap-ms = <200>;
+	    flavor = "tap-preferred";
+	    bindings = <&kp>, <&kp>;
+        };
+    };
+};
+
+/ {
+    keymap {
+    	compatible = "zmk,keymap";
+	default_layer {
+	    bindings = <
+&kp Q      &kp W      &kp E      &kp R      &kp T         &kp Y        &kp U      &kp I      &kp O      &lt LYR6 P
+&hm LGUI A &hm LALT S &hm LSFT D &hm LCTL F &kp G         &kp H        &hm RCTL J &hm RSFT K &hm LALT L &hm RGUI ESC
+&lt LYR5 Z &kp X      &lt LYR3 C &lt LYR4 V &lt LYR2 BSPC &lt LYR1 SPC &kp B      &kp N      &kp M      &kp ENTER
+    	    >;
+	};
+
+	first_layer {
+	    bindings = <
+&kp 1   &kp 2   &kp 3   &kp 4   &kp 5   &kp 6   &kp 7           &kp 8           &kp 9     &kp 0
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp MINUS       &kp EQL         &kp LBKT  &kp RBKT
+&trans  &none   &trans  &trans  &kp DEL &trans  &kp NON_US_HASH &kp NON_US_BSLH &kp COMMA &kp DOT
+    	    >;
+	};
+
+	second_layer {
+	    bindings = <
+&kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS        &kp STAR        &kp LPAR  &kp RPAR
+&kp F7  &kp F8  &kp F9   &kp F10  &kp F11   &kp F12   &kp UNDER       &kp PLUS        &kp LBRC  &kp RBRC
+&trans  &none   &trans   &trans   &trans    &trans    &kp LS(NON_US_HASH) &kp LS(NON_US_BSLH) &kp DOT &kp SLASH
+    	    >;
+	};
+
+	third_layer {
+	    bindings = <
+&kp GRAVE &none  &none  &none  &none   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT &kp BSLH
+&kp TAB   &none  &none  &none  &none   &kp COMMA  &kp DOT    &kp SLASH  &kp SEMI &kp SQT
+&trans    &none  &trans &trans &trans  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+	    >;
+	};
+
+	fourth_layer {
+	    bindings = <
+&kp TILDE   &none  &none  &none  &none   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC &kp PIPE
+&kp LS(TAB) &none  &none  &none  &none   &kp LS(COMMA) &kp LS(DOT) &kp LS(SLASH) &kp LS(COLON) &kp DQT
+&trans      &none  &trans &trans &trans  &trans     &kp HOME   &kp PGDN   &kp PGUP &kp END
+	    >;
+	};
+	fifth_layer {
+	    bindings = <
+&kp TILDE   &none  &none  &none  &none   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC &kp PIPE
+&kp LS(TAB) &none  &none  &none  &none   &kp LS(COMMA) &kp LS(DOT) &kp LS(SLASH) &kp LS(COLON) &kp DQT
+&trans      &none  &trans &trans &trans  &trans     &kp HOME   &kp PGDN   &kp PGUP &kp END
+	    >;
+	};
+	sixth_layer {
+	    bindings = <
+&kp TILDE   &none  &none  &none  &none   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC &kp PIPE
+&kp LS(TAB) &none  &none  &none  &none   &kp LS(COMMA) &kp LS(DOT) &kp LS(SLASH) &kp LS(COLON) &kp DQT
+&trans      &none  &trans &trans &trans  &trans     &kp HOME   &kp PGDN   &kp PGUP &kp END
+	    >;
+	};
+    };
+};
