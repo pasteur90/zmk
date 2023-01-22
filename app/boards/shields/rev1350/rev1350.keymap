@@ -74,7 +74,7 @@
    &kp DEL &trans &mwh SCROLL_LEFT &mmv MOVE_UP   &mwh SCROLL_RIGHT &mwh SCROLL_UP   &trans    &trans    &trans    &trans    &trans    &trans
    &trans  &trans &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &mwh SCROLL_DOWN &trans    &trans    &trans    &trans    &trans    &trans
    &trans  &trans &trans           &trans         &trans            &trans           &trans    &trans    &trans    &trans    &trans    &trans
-                                  &mkp MCLK  &mkp RCLK  &mkp LCLK   &trans   &trans
+                                  &mkp MCLK  &mkp LCLK  &mkp RCLK   &trans   &trans
                         >;
                 };
 
